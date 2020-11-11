@@ -1,0 +1,46 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.manning.pulsar</groupId>
+    <artifactId>Pulsar-Edge-Analytics</artifactId>
+    <version>1.0.0</version>
+  </parent>
+
+  <artifactId>Sensor-Simulator</artifactId>
+  <name>Edge Analytics:: Sensor Simulator</name>
+  
+  <build>
+   <plugins>
+   	 <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+
+     </plugin>
+   </plugins>
+  </build>
+  
+  <dependencies>
+  
+  	<dependency>
+    	<groupId>org.fusesource.mqtt-client</groupId>
+    	<artifactId>mqtt-client</artifactId>
+    	<version>1.16</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>com.manning.pulsar</groupId>
+		<artifactId>mqtt-schema</artifactId>
+		<version>${parent.version}</version>
+	</dependency>
+	
+	<dependency>
+  		<groupId>org.apache.avro</groupId>
+  		<artifactId>avro</artifactId>
+  		<version>1.9.2</version>
+  	</dependency>
+  	
+
+  </dependencies>
+   
+</project>
