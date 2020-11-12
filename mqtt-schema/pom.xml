@@ -3,11 +3,11 @@
   <parent>
     <groupId>com.manning.pulsar</groupId>
     <artifactId>Pulsar-Edge-Analytics</artifactId>
-    <version>1.0.0</version>
+    <version>${revision}</version>
   </parent>
   
   <artifactId>mqtt-schema</artifactId>
-  <name>Edge Analytics :: MQTT Schema</name>
+  <name>Pulsar Edge Analytics :: MQTT Schema</name>
   
   <build>
    <plugins>

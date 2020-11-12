@@ -4,11 +4,11 @@
   <parent>
     <groupId>com.manning.pulsar</groupId>
     <artifactId>Pulsar-Edge-Analytics</artifactId>
-    <version>1.0.0</version>
+    <version>${revision}</version>
   </parent>
 
   <artifactId>edge-analytics-functions</artifactId>
-  <name>Edge Analytics :: Edge Analytic Functions</name>
+  <name>Pulsar Edge Analytics :: Edge Analytic Functions</name>
   
 	<build>
 		<plugins>

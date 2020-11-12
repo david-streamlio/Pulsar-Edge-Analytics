@@ -4,11 +4,11 @@
   <parent>
     <groupId>com.manning.pulsar</groupId>
     <artifactId>Pulsar-Edge-Analytics</artifactId>
-    <version>1.0.0</version>
+    <version>${revision}</version>
   </parent>
 
   <artifactId>Sensor-Simulator</artifactId>
-  <name>Edge Analytics:: Sensor Simulator</name>
+  <name>Pulsar Edge Analytics :: Sensor Simulator</name>
   
   <build>
    <plugins>
