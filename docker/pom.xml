@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <parent>
+    <groupId>com.manning.pulsar</groupId>
+    <artifactId>Pulsar-Edge-Analytics</artifactId>
+    <version>${revision}</version>
+  </parent>
+
+  <artifactId>docker</artifactId>
+  <name>Pulsar Edge Analytics :: Docker Image</name>
+  
+  <build>
+	<plugins>
+	    <plugin>
+		   <groupId>io.fabric8</groupId>
+           <artifactId>docker-maven-plugin</artifactId>
+           <configuration>
+             <images>
+                <image>
+                   <name>pia/pulsar-mqtt</name>
+                   <build>
+                     <dockerFileDir>pulsar-mqtt</dockerFileDir>
+                     <assembly>
+                       <targetDir>/maven</targetDir>
+                       <mode>dir</mode>
+                       <descriptor>pulsar-mqtt/assembly.xml</descriptor>
+                     </assembly>
+                   </build>
+                </image>
+                
+                <image>
+                   <name>pia/sensor-database</name>
+                   <build>
+                     <dockerFileDir>sensor-database</dockerFileDir>
+                   </build>
+                </image>
+              </images>
+           </configuration>
+           <executions>
+             <execution>
+               <phase>package</phase>
+                <goals>
+                   <goal>build</goal>
+               </goals>
+             </execution>
+           </executions>
+        </plugin>
+	</plugins>
+  </build>
+  
+  <dependencies>
+     <dependency>
+         <groupId>${parent.groupId}</groupId>
+         <artifactId>edge-analytics-functions</artifactId>
+         <version>${parent.version}</version>
+     </dependency>
+     
+     <dependency>
+         <groupId>${parent.groupId}</groupId>
+         <artifactId>sensor-quantiles-sink</artifactId>
+         <version>${parent.version}</version>
+     </dependency>
+  </dependencies>
+	
+</project>
