@@ -19,7 +19,7 @@
   	<module>Sensor-Simulator</module>
   	<module>edge-analytics-functions</module>
   	<module>sensor-quantiles-sink</module>
-  	<module>docker</module>
+  	<module>docker-image</module>
   </modules>
 
   <build>
